@@ -58,7 +58,7 @@ class Venue(db.Model):
     image_link = db.Column(db.String(500))
     facebook_link = db.Column(db.String(120))
 
-    # TODO DONE: implement any missing fields, as a database migration using Flask-Migrate
+    # TODO (Done): implement any missing fields, as a database migration using Flask-Migrate
     website = db.Column(db.String(120))
     seeking_talent = db.Column(db.Boolean, default=False)
     seeking_description = db.Column(db.String())
@@ -92,7 +92,6 @@ class Artist(db.Model):
 class Show(db.Model):
     __tablename__ = 'Show'
 
-    # Composite PK: artist.id, venue.id and show_time as an artist can have multiple shows at the same venue at different times.
     artist_id = db.Column(db.Integer, db.ForeignKey(
         'Artist.id'), primary_key=True)
     venue_id = db.Column(db.Integer, db.ForeignKey(

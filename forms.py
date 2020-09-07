@@ -199,7 +199,7 @@ class ArtistForm(FlaskForm):
         'phone', validators=[DataRequired()]
     )
     image_link = StringField(
-        'image_link', validators=[Optional(), URL()]    # Can chain these
+        'image_link', validators=[Optional(), URL()]    
     )
     website = StringField(
         'website', validators=[Optional(), URL()]
